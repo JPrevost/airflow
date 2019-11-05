@@ -17,12 +17,13 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from builtins import bytes
 import os
-from subprocess import Popen, STDOUT, PIPE
-from tempfile import gettempdir, NamedTemporaryFile
-from airflow.utils.decorators import apply_defaults
+from builtins import bytes
+from subprocess import PIPE, STDOUT, Popen
+from tempfile import NamedTemporaryFile, gettempdir
+
 from airflow.sensors.base_sensor_operator import BaseSensorOperator
+from airflow.utils.decorators import apply_defaults
 from airflow.utils.file import TemporaryDirectory
 
 

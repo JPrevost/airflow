@@ -959,7 +959,7 @@ This is the current syntax for  `./breeze <./breeze>`_:
 
   -K, --kubernetes-version <KUBERNETES_VERSION>
           Kubernetes version - only used in case of 'kubernetes' environment.
-          One of [ v1.13.0 ]. Default: v1.13.0
+          One of [ v1.13.0 v1.15.3 ]. Default: v1.13.0
 
   -M, --kubernetes-mode <KUBERNETES_MODE>
           Kubernetes mode - only used in case of 'kubernetes' environment.

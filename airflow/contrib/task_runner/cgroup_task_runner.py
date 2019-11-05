@@ -22,8 +22,8 @@ import getpass
 import os
 import uuid
 
-from cgroupspy import trees
 import psutil
+from cgroupspy import trees
 
 from airflow.task.task_runner.base_task_runner import BaseTaskRunner
 from airflow.utils.helpers import reap_process_group

@@ -21,10 +21,9 @@ import os
 import sys
 import tempfile
 import unittest
-from tests.compat import MagicMock, Mock, call, patch
 
 from airflow.contrib.kubernetes.pod import Pod
-
+from tests.compat import MagicMock, Mock, call, patch
 
 SETTINGS_FILE_POLICY = """
 def policy(task_instance):

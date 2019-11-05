@@ -75,7 +75,7 @@ repos:
       - id: insert-license
         name: Add license for all JS files
         files: \.js$
-        exclude: ^\.github/.*$|^airflow/_vendor/.*$|^airflow/www/static/.*$
+        exclude: ^\.github/.*$|^airflow/_vendor/.*$|^airflow/www/static/.*|^airflow/www_rbac/static/.*$
         args:
           - --comment-style
           - "/**| *| */"
@@ -190,6 +190,14 @@ repos:
         entry: "./scripts/ci/pre_commit_lint_dockerfile.sh"
         files: ^Dockerfile.*$
         pass_filenames: true
+      - id: isort
+        name: Run isort to sort imports
+        language: python
+        entry: isort
+        files: \.py$
+        # To keep consistent with the global isort skip config defined in setup.cfg
+        exclude: ^airflow/_vendor/.*$|^build/.*$|^.tox/.*$|^venv/.*$
+        additional_dependencies: ['isort']
       - id: update-breeze-file
         name: Update output of breeze command in BREEZE.rst
         entry: "./scripts/ci/pre_commit_breeze_cmd_line.sh"
@@ -230,3 +238,16 @@ repos:
         files: \.py$
         pass_filenames: true
         require_serial: true
+      - id: mypy
+        name: Run mypy
+        language: system
+        entry: "./scripts/ci/pre_commit_mypy.sh"
+        files: \.py$
+        exclude: ^airflow/_vendor/.*$
+        pass_filenames: true
+      - id: flake8
+        name: Run flake8
+        language: system
+        entry: "./scripts/ci/pre_commit_flake8.sh"
+        files: \.py$
+        pass_filenames: true

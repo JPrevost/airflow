@@ -17,21 +17,17 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
-from past.builtins import basestring
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 import importlib
 import os
 import smtplib
-
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from email.utils import formatdate
+
+from past.builtins import basestring
 
 from airflow.configuration import conf
 from airflow.exceptions import AirflowConfigException

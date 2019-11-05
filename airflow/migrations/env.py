@@ -18,11 +18,12 @@
 # under the License.
 
 from __future__ import with_statement
-from alembic import context
+
 from logging.config import fileConfig
 
-from airflow import settings
-from airflow import models
+from alembic import context
+
+from airflow import models, settings
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

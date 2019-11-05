@@ -20,12 +20,11 @@
 import unittest
 from datetime import timedelta
 
-from mock import MagicMock, patch
-
 from airflow import DAG
 from airflow.contrib.operators.emr_add_steps_operator import EmrAddStepsOperator
 from airflow.models import TaskInstance
 from airflow.utils import timezone
+from tests.compat import MagicMock, patch
 
 DEFAULT_DATE = timezone.datetime(2017, 1, 1)
 

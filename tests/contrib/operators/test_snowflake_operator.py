@@ -22,11 +22,9 @@ from __future__ import print_function
 import unittest
 
 from airflow import DAG
-from airflow.utils import timezone
-
 from airflow.contrib.operators.snowflake_operator import SnowflakeOperator
+from airflow.utils import timezone
 from tests.compat import mock
-
 
 DEFAULT_DATE = timezone.datetime(2015, 1, 1)
 DEFAULT_DATE_ISO = DEFAULT_DATE.isoformat()

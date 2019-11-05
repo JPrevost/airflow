@@ -24,7 +24,6 @@ import os
 import re
 import unittest
 from tempfile import NamedTemporaryFile
-from tests.compat import mock
 
 import pendulum
 import six
@@ -32,7 +31,7 @@ from mock import patch
 
 from airflow import models, settings
 from airflow.configuration import conf
-from airflow.exceptions import AirflowException, AirflowDagCycleException
+from airflow.exceptions import AirflowDagCycleException, AirflowException
 from airflow.models import DAG, DagModel, TaskInstance as TI
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.subdag_operator import SubDagOperator
@@ -40,6 +39,7 @@ from airflow.utils import timezone
 from airflow.utils.dag_processing import list_py_file_paths
 from airflow.utils.state import State
 from airflow.utils.weight_rule import WeightRule
+from tests.compat import mock
 from tests.models import DEFAULT_DATE
 
 

@@ -20,9 +20,8 @@
 import unittest
 from datetime import datetime
 
-import mock
-
 from airflow.utils import operator_helpers
+from tests.compat import mock
 
 
 class TestOperatorHelpers(unittest.TestCase):

@@ -22,16 +22,15 @@ from __future__ import print_function, unicode_literals
 import contextlib
 import os
 import re
+import socket
 import subprocess
 import time
-import socket
 from collections import OrderedDict
 from tempfile import NamedTemporaryFile
 
 import six
 import unicodecsv as csv
-from past.builtins import basestring
-from past.builtins import unicode
+from past.builtins import basestring, unicode
 from six.moves import zip
 
 import airflow.security.utils as utils

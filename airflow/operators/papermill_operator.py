@@ -19,8 +19,8 @@
 
 import papermill as pm
 
-from airflow.models import BaseOperator
 from airflow.lineage.datasets import DataSet
+from airflow.models import BaseOperator
 from airflow.utils.decorators import apply_defaults
 
 

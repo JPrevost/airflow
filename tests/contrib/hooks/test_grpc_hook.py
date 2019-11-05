@@ -17,15 +17,16 @@
 # under the License.
 
 import unittest
+
+from airflow.contrib.hooks.grpc_hook import GrpcHook
+from airflow.exceptions import AirflowConfigException
+from airflow.models import Connection
+from tests.compat import mock
+
 try:
     from StringIO import StringIO
 except ImportError:
     from io import StringIO
-
-from airflow.exceptions import AirflowConfigException
-from airflow.contrib.hooks.grpc_hook import GrpcHook
-from airflow.models import Connection
-from tests.compat import mock
 
 
 def get_airflow_connection(auth_type="NO_AUTH", credential_pem_file=None, scopes=None):

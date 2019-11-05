@@ -17,17 +17,14 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 import os
 import random
 from typing import Iterable
 
-from airflow.models import Connection
 from airflow.exceptions import AirflowException
+from airflow.models import Connection
 from airflow.utils.db import provide_session
 from airflow.utils.log.logging_mixin import LoggingMixin
 

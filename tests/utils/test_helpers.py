@@ -29,10 +29,10 @@ import psutil
 import six
 
 from airflow import DAG
-from airflow.utils import helpers
+from airflow.exceptions import AirflowException
 from airflow.models import TaskInstance
 from airflow.operators.dummy_operator import DummyOperator
-from airflow.exceptions import AirflowException
+from airflow.utils import helpers
 
 
 class TestHelpers(unittest.TestCase):

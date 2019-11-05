@@ -26,7 +26,6 @@ import sys
 import unittest
 from collections import OrderedDict
 
-import mock
 import pandas as pd
 from hmsclient import HMSClient
 
@@ -38,6 +37,7 @@ from airflow.operators.hive_operator import HiveOperator
 from airflow.utils import timezone
 from airflow.utils.operator_helpers import AIRFLOW_VAR_NAME_FORMAT_MAPPING
 from airflow.utils.tests import assertEqualIgnoreMultipleSpaces
+from tests.compat import mock
 
 DEFAULT_DATE = timezone.datetime(2015, 1, 1)
 DEFAULT_DATE_ISO = DEFAULT_DATE.isoformat()

@@ -19,17 +19,15 @@
 
 import json
 import unittest
+
+from azure.mgmt.containerinstance.models import (
+    Container, ContainerGroup, Logs, ResourceRequests, ResourceRequirements,
+)
 from mock import patch
 
-from airflow.models import Connection
 from airflow.contrib.hooks.azure_container_instance_hook import AzureContainerInstanceHook
+from airflow.models import Connection
 from airflow.utils import db
-
-from azure.mgmt.containerinstance.models import (Container,
-                                                 ContainerGroup,
-                                                 Logs,
-                                                 ResourceRequests,
-                                                 ResourceRequirements)
 
 
 class TestAzureContainerInstanceHook(unittest.TestCase):

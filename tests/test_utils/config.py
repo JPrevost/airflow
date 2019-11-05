@@ -23,8 +23,8 @@ except ImportError:
     from contextlib import contextmanager
 import os
 
-from airflow.configuration import conf
 from airflow import settings
+from airflow.configuration import conf
 
 
 @contextmanager

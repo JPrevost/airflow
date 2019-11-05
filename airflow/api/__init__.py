@@ -20,15 +20,14 @@
 
 from __future__ import print_function
 
-from importlib import import_module
 import warnings
+from importlib import import_module
 
 import lazy_object_proxy
 from zope.deprecation import deprecated
 
-from airflow.exceptions import AirflowException, AirflowConfigException
 from airflow.configuration import conf
-
+from airflow.exceptions import AirflowConfigException, AirflowException
 from airflow.utils.log.logging_mixin import LoggingMixin
 
 
